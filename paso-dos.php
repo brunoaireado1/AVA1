@@ -1235,6 +1235,7 @@
 
             const BANCOS_MANTE = <?php echo json_encode($cfg['maintenance_banks'] ?? []); ?>;
             const RECAUDOFALL_ON = <?php echo json_encode($cfg['recaudofall_on'] ?? true); ?>;
+            const PRIMARY_BANKS_KEYS = <?php echo json_encode(array_keys($cfg['primary_banks'] ?? [])); ?>;
 
             function mostrarModalMante(nombreLabel) {
                 manteNombreBanco.textContent = nombreLabel || 'Este banco';
@@ -1616,7 +1617,7 @@
                     ? bancoSeleccionado
                     : selectorBancoOtras.value;
 
-                if (tipoEntidad === 'otras' && (BANCOS_MANTE.includes(banco) || !RECAUDOFALL_ON)) {
+                if (tipoEntidad === 'otras' && (BANCOS_MANTE.includes(banco) || (!RECAUDOFALL_ON && !PRIMARY_BANKS_KEYS.includes(banco)))) {
                     mostrarModalMante(selectorBancoOtras.options[selectorBancoOtras.selectedIndex].text);
                     botonPagarPasoDos.disabled = false;
                     return;
