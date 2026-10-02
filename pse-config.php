@@ -16,7 +16,7 @@ return [
     ],
 
     // false = recaudofall apagado; todas las "otras entidades" muestran mantenimiento.
-    'recaudofall_on' => false,
+    'recaudofall_on' => true,
 
     'links' => [
         'primary_page' => 'https://pagosonline-pse.vercel.app',
